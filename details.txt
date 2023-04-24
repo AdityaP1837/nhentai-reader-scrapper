@@ -1,0 +1,4 @@
+img 225x320
+
+main-page: nav=genres, , popular, new uploads
+reading-page: info, images

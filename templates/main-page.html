@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Title</h1>
+      <ul>
+        <li>
+          <a href=""><i class="bx bx-home"></i>Home</a>
+        </li>
+        <li>
+          <a href=""><i class="bx bx-category"></i>Genres</a>
+        </li>
+        <li>
+          <a href=""><i class="bx bx-list-ul"></i>List</a>
+        </li>
+      </ul>
+    </div>
+    <div class="contents">
+      <h2><i class="bx bxs-hot"></i>Popular Posts</h2>
+      <div class="popular">
+        {% for popular in page_details["popular_now"] %}
+        <div class="popular-items">
+          <a href="{{popular['page_link']}}">
+            <img src="{{popular['img']}}" alt="" />
+            <h3>{{popular['title']}}</h3>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+
+      <h2><i class="bx bxs-book-content"></i>New Uploads</h2>
+      <div class="new-uploads">
+        {% for new in page_details['new_uploads'] %}
+        <div class="new-uploads-items">
+          <a href="{{new['page_link']}}">
+            <img src="{{new['img']}}" alt="" />
+            <h3>{{new['title']}}</h3>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
