@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+    <div class="details">
+        <div class="img-div">
+            <img src="{{page_data['manga_info']['img']}}" alt="">
+        </div>
+        <div class="info-text">
+            <h3>{{page_data['manga_info']['title']}}</h3>
+            <h3>{{page_data['manga_info']['jp_title']}}</h3>
+            <h3>Tags</h3>
+            <ul>
+                {% for tag in page_data['manga_info']['tags'] %}
+                <li><a href="{{tag['link']}}">{{tag['tag']}}</a></li>
+                {% endfor %}
+            </ul>
+            <h3>Artists</h3>
+            <ul>
+                {% for artist in page_data['manga_info']['artists'] %}
+                <li><a href="{{artist['link']}}">{{artist['artist']}}</a></li>
+                {% endfor %}
+            </ul>
+            <h3>Language: <span>{{page_data['manga_info']['language']}}</span></h3>
+            <h3>Categories: <span>{{page_data['manga_info']['categories']}}</span></h3>
+            <h3>Pages: <span>{{page_data['manga_info']['pages']}}</span></h3>
+        </div>
+    </div>
+
+        <div class="reading-images">
+
+            {% for image in page_data['images'] %}
+            <div class="image-slide">
+                <img src="{{image}}" alt="">
+            </div>
+            {% endfor %}
+
+        </div>
+
+</body>
+
+</html>

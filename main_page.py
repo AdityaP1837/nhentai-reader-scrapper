@@ -53,14 +53,15 @@ soup = BeautifulSoup(r.content, "html.parser")
 #     link = i.a.img["data-src"]
 #     images_list.append(link)
 
+
 #! More Like This
-# similar_contents = []
-# similar = soup.find("div", class_="index-container").find_all("div", class_="gallery")
-# for i in similar:
-#     link = i.a
-#     info = {
-#         'link': link["href"],
-#         'img': link.img["data-src"],
-#         'title': i.find("div", class_="caption").text
-#     }
-#     similar_contents.append(info)
+similar_contents = []
+similar = soup.find("div", class_="index-container").find_all("div", class_="gallery")
+for i in similar:
+    link = i.a
+    info = {
+        'link': link["href"],
+        'img': link.img["data-src"],
+        'title': i.find("div", class_="caption").text
+    }
+    similar_contents.append(info)

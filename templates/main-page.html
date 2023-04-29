@@ -1,33 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
-    <link rel="stylesheet" href="/static/style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
-    <div class="nav">
-      <h1>Title</h1>
-      <ul>
-        <li>
-          <a href=""><i class="bx bx-home"></i>Home</a>
-        </li>
-        <li>
-          <a href=""><i class="bx bx-category"></i>Genres</a>
-        </li>
-        <li>
-          <a href=""><i class="bx bx-list-ul"></i>List</a>
-        </li>
-      </ul>
-    </div>
-    <div class="contents">
+{% include 'header.html' %}
+<div class="contents">
       <h2><i class="bx bxs-hot"></i>Popular Posts</h2>
       <div class="popular">
         {% for popular in page_details["popular_now"] %}
@@ -51,6 +23,17 @@
         </div>
         {% endfor %}
       </div>
+    </div>
+
+    <div class="pagination">
+      <ul class="pagination-list">
+        {% for list in page_details['pagination'] %}
+        <li class="pagination-list-items">
+          <a href="{{list['link']}}">{{list['text']}}</a>
+        </li>
+        {% endfor %}
+        <i class="fa fa-chevron-right">…</i>
+      </ul>
     </div>
   </body>
 </html>

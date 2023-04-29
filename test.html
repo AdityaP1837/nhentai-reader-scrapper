@@ -13,7 +13,6 @@
         html,
         body {
             background-color: blanchedalmond;
-            position: relative;
         }
 
         body {
@@ -26,7 +25,7 @@
         }
 
         .swiper {
-            width: 100%;
+            width: 85%;
             height: 100%;
             background-color: black;
         }
@@ -45,12 +44,72 @@
             width: 30%;
             object-fit: cover;
         }
+
+        .details {
+            display: flex;
+            background-color: black;
+            margin: 10px 20%;
+            padding: 20px;
+        }
+
+        .details .img-div img {
+            width: 350px;
+        }
+
+        .details .info-text {
+            margin-left: 15%;
+        }
+
+        .details .info-text h3 {
+            color: aqua;
+        }
+
+        .details .info-text ul {
+            color: aliceblue;
+            display: flex;
+            list-style: none;
+        }
+
+        .details .info-text ul li {
+            margin: 0 5px;
+        }
     </style>
 </head>
 
 <body>
-    <h3>Reading Now</h3>
-    <!-- Swiper -->
+    <div class="details">
+        <div class="img-div">
+            <img src="test.jpg" alt="">
+        </div>
+        <div class="info-text">
+            <h3>Title eN</h3>
+            <h3>Title Jp</h3>
+            <h3>Tags</h3>
+            <ul>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+            </ul>
+            <h3>Artists</h3>
+            <ul>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+            </ul>
+            <h3>Language: English</h3>
+            <h3>Categories: Manga</h3>
+            <h3>Pages: 000</h3>
+        </div>
+    </div>
+
+    <!--! Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">

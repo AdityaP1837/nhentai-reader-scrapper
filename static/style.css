@@ -92,12 +92,122 @@ body {
 .contents .new-uploads .new-uploads-items {
     margin: 20px;
     width: 220px;
-    height: fit-content;
+    background-color: darkred;
 }
 
-.contents .new-uploads .new-uploads-items img {
+.contents .new-uploads .new-uploads-items a {
+    text-decoration: none;
+}
+
+.contents .new-uploads .new-uploads-items a img {
     width: 220px;
-    width: 320px;
 }
 
-.contents .new-uploads .new-uploads-items h3 {}
+.contents .new-uploads .new-uploads-items h3 {
+    color: chartreuse;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.pagination {
+    background: aliceblue;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin: 40px auto;
+    height: 40px;
+    padding: 20px;
+    width: 740px;
+    overflow: hidden;
+}
+
+.pagination .pagination-list {
+    display: flex;
+    list-style: none;
+}
+
+.pagination .pagination-list .pagination-list-items {
+    margin: 0 10px;
+    background: black;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.pagination .pagination-list .pagination-list-items a {
+    text-decoration: none;
+    color: red;
+}
+
+/*! Reading Page */
+.swiper {
+    width: 85%;
+    height: 100%;
+    background-color: black;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 30%;
+    object-fit: cover;
+}
+
+.details {
+    display: flex;
+    background-color: black;
+    margin: 10px 23% 55px;
+    padding: 20px;
+    width: 1150px;
+}
+
+.details .img-div img {
+    width: 270px;
+}
+
+.details .info-text {
+    margin-left: 5%;
+}
+
+.details .info-text h3 {
+    margin: 12px 0;
+    color: aqua;
+}
+
+.details .info-text ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.details .info-text ul li {
+    margin: 10px 5px;
+}
+
+.details .info-text ul li a {
+    text-decoration: none;
+    color: red;
+    background-color: white;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* .reading-images {
+    margin-left: 23%;
+} */
+
+.reading-images .image-slide {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.reading-images .image-slide img {
+    width: 750px;
+}
