@@ -4,10 +4,10 @@ from bs4 import BeautifulSoup
 class Hanime_Brain:
     def __init__(self):
         self.url = "https://nhentai.to"
-        self.response = requests.get(self.url)
 
-    def main_page(self):
-        soup = BeautifulSoup(self.response.content, "html.parser")
+    def main_page_pages(self, url):
+        response = requests.get(url)
+        soup = BeautifulSoup(response.content, "html.parser")
         all_container = soup.find_all("div", class_="index-container")
 
         #! Popular Now
@@ -38,9 +38,12 @@ class Hanime_Brain:
         pagination_lists = []
         pagination = soup.find("section", class_="pagination").find_all("a")
         for i in pagination:
-            l = str(i["href"])
-            info = {
-                'link': l.replace("https://nhentai.to/?", "/page/"),
+            l = i["href"].replace("https://nhentai.to?", "/page/")
+            if i.text == '':
+                pass
+            else:
+                info = {
+                'link': l,
                 'text': i.text
             }
             pagination_lists.append(info)
@@ -74,7 +77,7 @@ class Hanime_Brain:
         for i in tags.find_all("a"):
             data = {
                 "tag": i.find("span", class_="name").text,
-                "link": i["href"]
+                "link": i["href"].replace("https://nhentai.to", "")
             }
             tags_list.append(data)
 
@@ -125,3 +128,21 @@ class Hanime_Brain:
             'similar': similar_contents
         }
         return reading_page_info
+    
+    def tags_page(self, tag):
+        url = f"https://nhentai.to/tag/{tag}"
+        response = requests.get(url)
+        soup = BeautifulSoup(response.content, "html.parser")
+
+        all_results = soup.find_all("div", class_="gallery")
+        tags_lists = []
+        for i in all_results:
+            temp = i.a
+            info = {
+                "title": temp.div.text,
+                "img": temp.img["data-src"],
+                "page_link": i.a['href'],
+            }
+            tags_lists.append(info)
+
+        return tags_lists

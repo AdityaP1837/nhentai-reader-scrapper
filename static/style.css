@@ -211,3 +211,59 @@ body {
 .reading-images .image-slide img {
     width: 750px;
 }
+
+@media (max-width: 360px) {
+    .nav {
+        width: 100%;
+        padding: 7px 27px 7px 9px;
+    }
+
+    .nav h1 {
+        font-size: 25px;
+    }
+
+    .nav ul {
+        margin-left: 49%;
+    }
+
+    .nav ul li {
+        padding: 4px;
+        font-size: 13px;
+        margin: 0 5px;
+    }
+
+    .contents h2 {
+        margin: 6px 21% 6px 37%;
+        font-size: 16px;
+    }
+
+    .contents .popular,
+    .contents .new-uploads {
+        margin: 10px 6%;
+        width: 100%;
+    }
+
+    .contents .popular .popular-items,
+    .contents .new-uploads .new-uploads-items {
+        margin: 12px;
+        width: 150px;
+    }
+
+    .contents .popular .popular-items a img {
+        width: 150px;
+        height: 213px;
+    }
+
+    .contents .new-uploads .new-uploads-items a img {
+        width: 150px;
+    }
+
+    .contents .popular .popular-items h3,
+    .contents .new-uploads .new-uploads-items h3 {
+        font-size: 14px;
+    }
+
+    .pagination {
+        display: none;
+    }
+}
