@@ -86,7 +86,7 @@ body {
 .contents .new-uploads {
     display: flex;
     flex-wrap: wrap;
-    margin: 10px 12%;
+    margin: 10px 15%;
 }
 
 .contents .new-uploads .new-uploads-items {
@@ -266,4 +266,6 @@ body {
     .pagination {
         display: none;
     }
+
+    /*! Reading Page */
 }
