@@ -31,4 +31,4 @@ def tags_page(page):
     return render_template('tags-page.html', page_data=tags_page_data, current_page=page)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0")
