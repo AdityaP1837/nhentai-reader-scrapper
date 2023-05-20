@@ -212,9 +212,81 @@ body {
     width: 750px;
 }
 
-@media (max-width: 360px) {
+/*! Tags Page */
+.tags-container {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 10%;
+    padding-left: 35px;
+}
+
+.tags-container .container-items {
+    margin: 15px;
+    background-color: coral;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.tags-container .container-items a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags-container .container-items a h4 {
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.tags-container .container-items a .count {
+    background-color: floralwhite;
+    padding: 7px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: black;
+}
+
+.tags-pagination {
+    margin: 0 40%;
+}
+
+.tags-pagination ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.tags-pagination ul li {
+    background-color: aqua;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.tags-pagination ul li:hover {
+    cursor: pointer;
+}
+
+.tags-pagination ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.active-page {
+    background-color: blueviolet;
+}
+
+@media (max-width: 370px) {
     .nav {
-        width: 100%;
+        width: 103%;
         padding: 7px 27px 7px 9px;
     }
 
@@ -223,7 +295,7 @@ body {
     }
 
     .nav ul {
-        margin-left: 49%;
+        margin-left: 47%;
     }
 
     .nav ul li {

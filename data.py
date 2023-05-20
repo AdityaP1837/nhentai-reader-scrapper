@@ -146,3 +146,93 @@ class Hanime_Brain:
             tags_lists.append(info)
 
         return tags_lists
+    
+    def full_tags_pages(self, pages):
+        url = self.url + "/tags"
+        if pages == 1:
+            all_tags_data = []
+            for i in range(1, 11):
+                link = f"{url}?page={i}"
+                i = requests.get(link).text
+                s = BeautifulSoup(i, "html.parser")
+
+                links = s.find_all("a", class_="tag")
+
+                for link in links:
+                    info = {
+                        "a": link["href"],
+                        "text": (link.span.text).strip(),
+                        "count": link.find("span", class_="count").text
+                    }
+                    all_tags_data.append(info)
+            return all_tags_data
+        if pages == 2:
+            all_tags_data = []
+            for i in range(11, 21):
+                link = f"{url}?page={i}"
+                i = requests.get(link).text
+                s = BeautifulSoup(i, "html.parser")
+
+                links = s.find_all("a", class_="tag")
+
+                for link in links:
+                    info = {
+                        "a": link["href"],
+                        "text": (link.span.text).strip(),
+                        "count": link.find("span", class_="count").text
+                    }
+                    all_tags_data.append(info)
+            return all_tags_data
+        if pages == 3:
+            all_tags_data = []
+            for i in range(21, 31):
+                link = f"{url}?page={i}"
+                i = requests.get(link).text
+                s = BeautifulSoup(i, "html.parser")
+
+                links = s.find_all("a", class_="tag")
+
+                for link in links:
+                    info = {
+                        "a": link["href"],
+                        "text": (link.span.text).strip(),
+                        "count": link.find("span", class_="count").text
+                    }
+                    all_tags_data.append(info)
+            return all_tags_data
+        if pages == 4:
+            all_tags_data = []
+            for i in range(31, 41):
+                link = f"{url}?page={i}"
+                i = requests.get(link).text
+                s = BeautifulSoup(i, "html.parser")
+
+                links = s.find_all("a", class_="tag")
+
+                for link in links:
+                    info = {
+                        "a": link["href"],
+                        "text": (link.span.text).strip(),
+                        "count": link.find("span", class_="count").text
+                    }
+                    all_tags_data.append(info)
+            return all_tags_data
+        if pages == 5:
+            all_tags_data = []
+            for i in range(41, 52):
+                link = f"{url}?page={i}"
+                i = requests.get(link).text
+                s = BeautifulSoup(i, "html.parser")
+
+                links = s.find_all("a", class_="tag")
+
+                for link in links:
+                    info = {
+                        "a": link["href"],
+                        "text": (link.span.text).strip(),
+                        "count": link.find("span", class_="count").text
+                    }
+                    all_tags_data.append(info)
+            return all_tags_data
+        
+        

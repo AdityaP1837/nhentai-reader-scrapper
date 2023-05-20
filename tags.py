@@ -31,3 +31,5 @@ for page_link in all_pages_links:
             "count": link.find("span", class_="count").text
         }
         all_tags_data.append(info)
+
+print(len(all_tags_data))

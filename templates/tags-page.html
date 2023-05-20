@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+
+<div class="tags-pagination">
+    <ul>
+        <li class="nav-pagination"><a href="/tags/1">1</a></li>
+        <li class="nav-pagination"><a href="/tags/2">2</a></li>
+        <li class="nav-pagination"><a href="/tags/3">3</a></li>
+        <li class="nav-pagination"><a href="/tags/4">4</a></li>
+        <li class="nav-pagination"><a href="/tags/5">5</a></li>
+    </ul>
+</div>
+<div class="tags-container">
+
+    {% for tag in page_data %}
+    <div class="container-items">
+        <a href="{{tag["a"]}}">
+            <h4>{{tag["text"]}}</h4>
+            <h4 class="count">{{tag["count"]}}</h4>
+        </a>
+    </div>
+    {% endfor %}
+
+</div>
+
+<script src="/static/app.js"></script>

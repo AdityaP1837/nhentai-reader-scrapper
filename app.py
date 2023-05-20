@@ -25,10 +25,10 @@ def tags_search(tag):
     reading_page_data = hanime_brain.tags_page(tag)
     return render_template('reading-page.html', page_data=reading_page_data)
 
-@app.route('/tags')
-def tags_page():
-    reading_page_data = hanime_brain.reading_page(id)
-    return render_template('reading-page.html', page_data=reading_page_data)
+@app.route('/tags/<page>')
+def tags_page(page):
+    tags_page_data = hanime_brain.full_tags_pages(int(page))
+    return render_template('tags-page.html', page_data=tags_page_data, current_page=page)
 
 if __name__ == '__main__':
     app.run(debug=True)
