@@ -235,4 +235,5 @@ class Hanime_Brain:
                     all_tags_data.append(info)
             return all_tags_data
         
-        
+    def tags_search(self, tag_name):
+        pass
