@@ -6,14 +6,14 @@
         <div class="info-text">
             <h3>{{page_data['manga_info']['title']}}</h3>
             <h3>{{page_data['manga_info']['jp_title']}}</h3>
-            <h3>Tags</h3>
-            <ul>
+            <h3>Parodies</h3>
+            <ul class="parodies">
                 {% for tag in page_data['manga_info']['tags'] %}
                 <li><a href="{{tag['link']}}">{{tag['tag']}}</a></li>
                 {% endfor %}
             </ul>
-            <h3>Artists</h3>
-            <ul>
+            <h3>Tags</h3>
+            <ul class="tags">
                 {% for artist in page_data['manga_info']['artists'] %}
                 <li><a href="{{artist['link']}}">{{artist['artist']}}</a></li>
                 {% endfor %}

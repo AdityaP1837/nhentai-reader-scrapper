@@ -17,6 +17,11 @@ body {
     align-items: center;
 }
 
+.nav h1 a {
+    text-decoration: none;
+    color: black;
+}
+
 .nav ul {
     display: flex;
     list-style: none;
@@ -286,26 +291,30 @@ body {
 
 @media (max-width: 370px) {
     .nav {
-        width: 103%;
-        padding: 7px 27px 7px 9px;
+        /* width: 365px; */
+        padding: 7px 0px 7px 9px;
     }
 
     .nav h1 {
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .nav ul {
-        margin-left: 42%;
+        margin-left: 20%;
+    }
+
+    .nav ul li:nth-child(1) {
+        display: none;
     }
 
     .nav ul li {
-        padding: 4px;
+        padding: 5px;
         font-size: 13px;
         margin: 0 5px;
     }
 
     .contents h2 {
-        margin: 6px 21% 6px 37%;
+        margin: 6px 25% 6px 32%;
         font-size: 16px;
     }
 
@@ -318,8 +327,8 @@ body {
     .contents .popular .popular-items,
     .contents .new-uploads .new-uploads-items {
         margin: 10px;
-        width: 150px;
-        height: 270px;
+        width: 160px;
+        height: 280px;
         overflow: scroll;
     }
 
@@ -329,8 +338,8 @@ body {
     }
 
     .contents .popular .popular-items a img {
-        width: 200px;
-        height: 253px;
+        width: 160px;
+        height: 228px;
     }
 
     .contents .new-uploads .new-uploads-items a img {
@@ -351,22 +360,50 @@ body {
         margin: 10px 2%;
         padding: 0;
         width: 360px;
+        display: block;
+    }
+
+    .details .img-div {
+        text-align: center;
+    }
+
+    .details .img-div img {
+        width: 160px;
+
     }
 
     .details .info-text {
-        margin-left: 1%;
+        margin-left: 0;
+        width: 360px;
     }
 
     .details .info-text h3:nth-child(2) {
         display: none;
     }
 
-    .details .img-div img {
-        width: 120px;
-
+    .reading-images .image-slide img {
+        width: 360px;
     }
 
-    .reading-images .image-slide img {
-        width: 365px;
+    /*! Tags Page  */
+    .tags-pagination {
+        margin: 0 10px;
+    }
+
+    .tags-pagination ul .nav-pagination {
+        font-size: 18px;
+    }
+
+    .tags-container {
+        padding-left: 0;
+        margin: 10px 2%;
+    }
+
+    .tags-container .container-items {
+        margin: 10px 5px;
+    }
+
+    .tags-container .container-items a h4 {
+        font-size: 15px;
     }
 }
